@@ -1,0 +1,53 @@
+﻿<Window x:Class="MoveMenu.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoveMenu"
+        mc:Ignorable="d"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        Title="MoveMenu - 設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:XamlControlsResources />
+                <ui:ThemeResources RequestedTheme="Light"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <StackPanel Width="280" Margin="10">
+            <Label x:Name="XLabel" Content="X"/>
+            <StackPanel Margin="0,5,0,0">
+                <ComboBox x:Name="XComboBox" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem x:Name="XDoNotChangeComboBoxItem" Content="変更しない"/>
+                    <ComboBoxItem x:Name="XLeftEdgeComboBoxItem" Content="左端"/>
+                    <ComboBoxItem x:Name="XMiddleComboBoxItem" Content="中央"/>
+                    <ComboBoxItem x:Name="XRightEdgeComboBoxItem" Content="右端"/>
+                    <ComboBoxItem x:Name="XCoordinateSpecificationComboBoxItem" Content="座標指定"/>
+                </ComboBox>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <ui:NumberBox x:Name="XNumberBox" Width="180" Value="0" SpinButtonPlacementMode="Inline"/>
+                    <Label Content="px" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <Label x:Name="YLabel" Content="Y" Margin="0,5,0,0"/>
+            <StackPanel Margin="0,5,0,0">
+                <ComboBox x:Name="YComboBox" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem x:Name="YDoNotChangeComboBoxItem" Content="変更しない"/>
+                    <ComboBoxItem x:Name="YTopEdgeComboBoxItem" Content="上端"/>
+                    <ComboBoxItem x:Name="YMiddleComboBoxItem" Content="中央"/>
+                    <ComboBoxItem x:Name="YBottomEdgeComboBoxItem" Content="下端"/>
+                    <ComboBoxItem x:Name="YCoordinateSpecificationComboBoxItem" Content="座標指定"/>
+                </ComboBox>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <ui:NumberBox x:Name="YNumberBox" HorizontalAlignment="Left" Width="180" Value="0" SpinButtonPlacementMode="Inline"/>
+                    <Label Content="px" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.18362.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>0.1.0</Version>
+    <Authors>FreeEcho</Authors>
+    <Product>MoveMenu</Product>
+    <Copyright>© 2025 FreeEcho</Copyright>
+    <Title>MoveMenu</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IPluginSwindom">
+      <HintPath>..\..\..\..\..\..\..\Library\FreeEcho\.Net\.Net8 (Swindom)\IPluginSwindom.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
